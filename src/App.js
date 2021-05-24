@@ -57,6 +57,12 @@ function App() {
                 Overview: <span id="overview"></span>
             </p>
 
+            <input type="radio" id="Popular" checked></input>
+            <label for="huey">Popular</label>
+            <input type="radio" id="ComingSoon"></input>
+            <label for="huey">Coming Soon</label>
+            <br />
+
             <button onClick={getMovie}>Random Movie Trailer</button>
             <br />
             <iframe width="420" height="345" src={movie}></iframe>
