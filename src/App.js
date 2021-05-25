@@ -44,28 +44,38 @@ function App() {
     };
     return (
         <div className="App">
-            <img src={poster} height="250px" />
-            <p>
-                Movie: <span id="title"></span>
-            </p>
+            <div class="row">
+                <div class="column">
+                    <div class="movieDetails">
+                        <img src={poster} height="250px" />
+                        <p>
+                            Movie: <span id="title"></span>
+                        </p>
 
-            <p>
-                Release Date: <span id="releaseDate"></span>
-            </p>
+                        <p>
+                            Release Date: <span id="releaseDate"></span>
+                        </p>
 
-            <p>
-                Overview: <span id="overview"></span>
-            </p>
+                        <p>
+                            Overview: <span id="overview"></span>
+                        </p>
 
-            <input type="radio" id="Popular" checked></input>
-            <label for="huey">Popular</label>
-            <input type="radio" id="ComingSoon"></input>
-            <label for="huey">Coming Soon</label>
-            <br />
+                        <input type="radio" id="Popular" checked></input>
+                        <label for="huey">Popular Movies</label>
+                        <input type="radio" id="ComingSoon"></input>
+                        <label for="huey">Coming Soon</label>
+                        <br></br>
 
-            <button onClick={getMovie}>Random Movie Trailer</button>
-            <br />
-            <iframe width="420" height="345" src={movie}></iframe>
+                        <button onClick={getMovie}>Random Movie Trailer</button>
+                        <br />
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="movieTrailer">
+                        <iframe width="420" height="345" src={movie}></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
